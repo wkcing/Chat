@@ -1,0 +1,26 @@
+<project default="main">
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="chat" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="dist/Chat.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="chat.Chat"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="dist/Chat.jar" fork="true"/>
+    </target>
+
+    <target name="main" depends="compile,jar,clean"> </target>
+</project>

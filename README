@@ -1,0 +1,15 @@
+Java Chat via Sockets.
+
+Instructions:
+
+Run "ant" (in directory with build.xml).
+
+Run dist/Char.jar or "ant run".
+
+Start server.
+
+Start client.
+
+Run as many Chat.jar as necessary.
+
+README.pdf (Español/Spanish) for more info (run from command prompt etc.)
